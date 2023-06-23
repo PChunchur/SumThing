@@ -11,9 +11,10 @@
 import Foundation
 import Combine
 import SwiftUI
+import Collections
 
 
-typealias TransactionGroup = [String : [Transaction ]]
+typealias TransactionGroup = OrderedDictionary<String, [Transaction ]>
 final class TransactionListViewModel1: ObservableObject{
     @Published var transaction: [Transaction] = []
     

@@ -29,7 +29,7 @@ struct TransactionList: View {
                 .listStyle(.plain)
                 
             }
-            .navigationTitle("Transactions")
+            .navigationTitle("Transaction")
             .navigationBarTitleDisplayMode(.inline)
             
             

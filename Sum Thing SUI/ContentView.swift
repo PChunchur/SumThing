@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ContentView: View {
     var body: some View {
@@ -16,8 +17,19 @@ struct ContentView: View {
                         .font(.title)
                         .bold()
                     
+                    //Marker : Code for Line Chart begins
+                   //linechart()
+                    
+                    
+                    
+                    
+                    
+                    
                     // Marker for Recent transaction list
+                    // Sends user to The list of transactions being made
+                    
                     RecentTransactionsList()
+                  
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -42,6 +54,7 @@ struct ContentView: View {
             
         }
         .navigationViewStyle(.stack)
+        .accentColor(.icon)
     }
     
     struct ContentView_Previews: PreviewProvider {
