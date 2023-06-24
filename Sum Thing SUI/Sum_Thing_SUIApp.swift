@@ -9,11 +9,13 @@ import SwiftUI
 
 @main
 struct Sum_Thing_SUIApp: App {
+    @StateObject private var dataController = DataController()
     @StateObject var TransactionsListVM = TransactionListViewModel1()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(TransactionsListVM)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

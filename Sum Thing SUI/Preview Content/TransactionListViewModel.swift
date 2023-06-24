@@ -15,8 +15,6 @@ import Collections
 
 
 typealias TransactionGroup = OrderedDictionary<String, [Transaction ]>
-typealias AllTransactionSum = [(String,Double)]
-
 final class TransactionListViewModel1: ObservableObject{
     @Published var transaction: [Transaction] = []
     
@@ -65,29 +63,6 @@ final class TransactionListViewModel1: ObservableObject{
         return GroupedTransactions
         
     }
-    func getTransactions() -> AllTransactionSum {
-        print("hi")// change the text
-        guard !transaction.isEmpty else  { return []}
-        
-        let today = Date()    //can use current date in strings and .parsed date
-        let dateInterval = Calendar.current.dateInterval(of: .month, for: today)!
-        
-        print("Date Interals",dateInterval)
-        var sum: Double = .zero
-        var cumulativeSum = AllTransactionSum()
-        
-        for date in stride(from: dateInterval.start, to: today, by:60*60*24){
-            let dailyExpenses = transaction.filter{ $0.dateParsed == date && $0.isExpense}
-            let dailyTotal = dailyExpenses.reduce(0){$0 - $1.signedAmt}
-            sum += dailyTotal
-            sum = sum.roundedTo2Digits()
-            cumulativeSum.append( (date.formatted() , sum))
-            print (date.formatted(), "dailyTotal:", dailyTotal, "sum:", sum)
-            
-        }
-        
-        return cumulativeSum
-    }
+    
 }
-
 

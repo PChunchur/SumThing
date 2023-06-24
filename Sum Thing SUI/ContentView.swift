@@ -9,8 +9,11 @@ import SwiftUI
 import SwiftUICharts
 
 struct ContentView: View {
+<<<<<<< HEAD
     @EnvironmentObject var transactionListVM : TransactionListViewModel1
     //var demoData : [Double] = [7,18,15,25,14,12,27,12,22]
+=======
+>>>>>>> 7692dea6c15cf899ef04da3b1f280a448a886fa8
     var body: some View {
         NavigationView{
             ScrollView{
@@ -20,6 +23,7 @@ struct ContentView: View {
                         .bold()
                     
                     //Marker : Code for Line Chart begins
+<<<<<<< HEAD
                     let data = transactionListVM.getTransactions()
                     let totalExpenses = data.last?.1 ?? 0
                     
@@ -37,6 +41,9 @@ struct ContentView: View {
                                             foregroundColor: ColorGradient(.blue, .purple))))
                     .frame(height: 250)
                     .background(Color.systemBackground )
+=======
+                   //linechart()
+>>>>>>> 7692dea6c15cf899ef04da3b1f280a448a886fa8
                     
                     
                     // Marker for Recent transaction list
