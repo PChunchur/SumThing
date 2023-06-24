@@ -18,4 +18,15 @@ class DataController: ObservableObject {
             }
         }
     }
+    
+    func save(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+            print("Data Saved!!!")
+        } catch {
+            print("Failed to save context: \(error)")
+        }
+    }
+
+    
 }

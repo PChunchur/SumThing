@@ -24,6 +24,7 @@
 		64F1EB902A4450E80018D34F /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F1EB8F2A4450E80018D34F /* TransactionList.swift */; };
 		C49A5C332A45A0F200C31ADA /* Input Transactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49A5C312A45A0F100C31ADA /* Input Transactions.xcdatamodeld */; };
 		C49A5C352A45A51E00C31ADA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A5C342A45A51E00C31ADA /* DataController.swift */; };
+		C4D084972A46ACEF00B0234D /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D084962A46ACEF00B0234D /* AddTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		64F1EB8F2A4450E80018D34F /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		C49A5C322A45A0F200C31ADA /* Input Transactions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Input Transactions.xcdatamodel"; sourceTree = "<group>"; };
 		C49A5C342A45A51E00C31ADA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C4D084962A46ACEF00B0234D /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				64844DB22A2262D80086E3C1 /* Sum_Thing_SUIApp.swift */,
 				64844DB42A2262D80086E3C1 /* ContentView.swift */,
+				C4D084962A46ACEF00B0234D /* AddTransactionView.swift */,
 				C49A5C302A45A0AE00C31ADA /* Data Model */,
 				64844DCF2A27AC3F0086E3C1 /* RecentTransactionsList.swift */,
 				64F1EB8F2A4450E80018D34F /* TransactionList.swift */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64844DC52A22772E0086E3C1 /* PreviewData.swift in Sources */,
+				C4D084972A46ACEF00B0234D /* AddTransactionView.swift in Sources */,
 				C49A5C352A45A51E00C31ADA /* DataController.swift in Sources */,
 				64844DC32A2275530086E3C1 /* TransactionModel.swift in Sources */,
 				64844DB52A2262D80086E3C1 /* ContentView.swift in Sources */,
