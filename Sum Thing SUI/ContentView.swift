@@ -25,7 +25,7 @@ struct ContentView: View {
                     
                     CardView {
                         VStack(alignment: .leading){
-                            ChartLabel(totalExpenses.formatted(.currency (code: "INR")), type: .title, format: "$%0.2f") //error here convert dollar to INR 
+                            ChartLabel(totalExpenses.formatted(.currency (code: "INR")), type: .title, format: "₹%0.2f")
                             
                             LineChart()
                             
@@ -37,10 +37,6 @@ struct ContentView: View {
                                             foregroundColor: ColorGradient(.blue, .purple))))
                     .frame(height: 250)
                     .background(Color.systemBackground )
-                    
-                    
-                    
-                    
                     
                     
                     // Marker for Recent transaction list
