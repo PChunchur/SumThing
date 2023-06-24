@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftUICharts
 
 struct ContentView: View {
-    @EnvironmentObject var transactionListVM : TransactionListViewModel1
-    var demoData : [Double] = [7,18,15,25,14,12,27,12,22]
     var body: some View {
         NavigationView{
             ScrollView{
@@ -20,23 +18,7 @@ struct ContentView: View {
                         .bold()
                     
                     //Marker : Code for Line Chart begins
-                    let data = transactionListVM.getTransactions()
-                    let totalExpenses = data.last?.1 ?? 0
-                    
-                    CardView {
-                        VStack(alignment: .leading){
-                            ChartLabel(totalExpenses.formatted(.currency (code: "INR")), type: .title, format: "$%0.2f") //error here convert dollar to INR 
-                            
-                            LineChart()
-                            
-                        }
-                        .background(Color.systemBackground )
-                    } 
-                    .data(demoData)
-                    .chartStyle((ChartStyle(backgroundColor: .icon,
-                                            foregroundColor: ColorGradient(.blue, .purple))))
-                    .frame(height: 250)
-                    .background(Color.systemBackground )
+                   //linechart()
                     
                     
                     
