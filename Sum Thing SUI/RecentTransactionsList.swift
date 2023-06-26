@@ -47,7 +47,7 @@ struct RecentTransactionsList: View {
         .padding(.top)
         .background(Color.systemBackground)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .shadow(color: Color.primary.opacity(0.3), radius: 10, x: 0,y: 5)
+        .shadow(color: Color.primary.opacity(0.3), radius: 5, x: 0,y: 5)
     }
     
     struct RecentTransactionsList_Previews: PreviewProvider {

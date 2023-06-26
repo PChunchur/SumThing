@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641495FD2A49C020005FA5A4 /* CategoryExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641495FC2A49C020005FA5A4 /* CategoryExpenses.swift */; };
 		643DFD592A46E6C100440AA2 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643DFD582A46E6C100440AA2 /* TransactionListViewModel.swift */; };
 		64844DB32A2262D80086E3C1 /* Sum_Thing_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64844DB22A2262D80086E3C1 /* Sum_Thing_SUIApp.swift */; };
 		64844DB52A2262D80086E3C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64844DB42A2262D80086E3C1 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		641495FC2A49C020005FA5A4 /* CategoryExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExpenses.swift; sourceTree = "<group>"; };
 		643DFD582A46E6C100440AA2 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionListViewModel.swift; path = "Preview Content/TransactionListViewModel.swift"; sourceTree = "<group>"; };
 		64844DAF2A2262D80086E3C1 /* Sum Thing SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sum Thing SUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64844DB22A2262D80086E3C1 /* Sum_Thing_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum_Thing_SUIApp.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				C4D084962A46ACEF00B0234D /* AddTransactionView.swift */,
 				C49A5C302A45A0AE00C31ADA /* Data Model */,
 				64844DCF2A27AC3F0086E3C1 /* RecentTransactionsList.swift */,
+				641495FC2A49C020005FA5A4 /* CategoryExpenses.swift */,
 				643DFD582A46E6C100440AA2 /* TransactionListViewModel.swift */,
 				64F1EB8F2A4450E80018D34F /* TransactionList.swift */,
 				64844DC22A2275530086E3C1 /* TransactionModel.swift */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641495FD2A49C020005FA5A4 /* CategoryExpenses.swift in Sources */,
 				64844DC52A22772E0086E3C1 /* PreviewData.swift in Sources */,
 				C4D084972A46ACEF00B0234D /* AddTransactionView.swift in Sources */,
 				C49A5C352A45A51E00C31ADA /* DataController.swift in Sources */,
