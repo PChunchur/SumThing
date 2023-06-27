@@ -28,19 +28,19 @@ class DataController: ObservableObject {
         }
     }
 
-    func addTransaction(name: String, amount: Int64, comment: String, context: NSManagedObjectContext) {
+    func addTransaction(name: String, amount: Int64, comment: String, date: Date,transaction_id: UUID, context: NSManagedObjectContext) {
         let transaction = TransactionEntity(context: context)
         transaction.amount = amount
         transaction.comment = comment
-        transaction.date = Date()
+        transaction.date = date
         transaction.name = name
-        transaction.transaction_id = UUID()
+        transaction.transaction_id = transaction_id
         
         save(context: context)
     }
 
-    func editTransaction(transaction: TransactionEntity, comment: String, amount: Int64, context: NSManagedObjectContext) {
-        transaction.date = Date()
+    func editTransaction(transaction: TransactionEntity, comment: String, amount: Int64, date: Date, context: NSManagedObjectContext) {
+        transaction.date = date
         transaction.comment = comment
         transaction.amount = amount
         
