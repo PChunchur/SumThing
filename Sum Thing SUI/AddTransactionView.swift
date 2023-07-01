@@ -16,6 +16,21 @@ struct AddTransactionView: View {
     @State private var comment = ""
     @State private var date = Date()
     @State private var id = UUID()
+    @State private var selectedCategory = "Uncategorized"
+        
+    let categories = [
+            Category.autoAndTransport,
+            Category.billsAndUtilities,
+            Category.entertainment,
+            Category.feesAndCharges,
+            Category.foodAndDining,
+            Category.house,
+            Category.income,
+            Category.shopping,
+            Category.transfer,
+            Category.health,
+            Category.subscriptions
+        ]
     
     var body: some View {
         Form {
@@ -31,12 +46,17 @@ struct AddTransactionView: View {
                 DatePicker(" Date ", selection: $date, displayedComponents:
                             [.date]).datePickerStyle(.compact)
                 DatePicker(" Time ", selection: $date, displayedComponents: [.hourAndMinute]).datePickerStyle(.compact)
+                Picker("Category", selection: $selectedCategory) {
+                                    ForEach(categories, id: \.id) { category in
+                                        Text(category.name)
+                                    }
+                                }
                 Text(" Tranaction Id: \(id.uuidString)")
                 
                 HStack {
                     Spacer()
                     Button(" Submit ") {
-                        DataController().addTransaction(name: name, amount: amount, comment: comment, date: date,transaction_id: id, context: managedObjectContext)
+                        DataController().addTransaction(name: name, amount: amount, comment: comment, date: date, category: selectedCategory, transaction_id: id, context: managedObjectContext)
                         dismiss()
                     }
                     Spacer()

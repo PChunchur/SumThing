@@ -14,68 +14,26 @@ struct ContentView: View {
     //var demoData : [Double] = [7,18,15,25,14,12,27,12,22]
     var body: some View {
         NavigationView{
-            ScrollView{
-                VStack(alignment: .leading, spacing: 15){
-                    Text("Summary")
-                        .font(.title)
-                        .bold()
-                    
-                    //Marker : Code for Line Chart begins
-                    let data = transactionListVM.getTransactions()
-                    let totalExpenses = data.last?.1 ?? 0
-                    
-                    CardView {
-                        VStack(alignment: .leading){
-                            ChartLabel(totalExpenses.formatted(.currency (code: "INR")), type: .title, format: "₹%0.2f")
-                            
-                            LineChart()
-                            
-                        }
-                        .background(Color.systemBackground )
+            TabView {
+                MainView()
+                    .tabItem {
+                        Label("Summary", systemImage: "house.fill")
                     }
-
-                    .data(data)
-                    .chartStyle((ChartStyle(backgroundColor: .icon,
-                                            foregroundColor: ColorGradient(.blue, .purple))))
-                    .frame(height: 250)
-                    //.background(Color.icon )
-                   //linechart()
-                    
-                    
-                    // Marker for Recent transaction list
-                    // Sends user to The list of transactions being made
-                    
-                    RecentTransactionsList()
-                  
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-            
+                AddTransactionView()
+                    .tabItem {
+                        Label("Input", systemImage: "tray.and.arrow.up.fill")
+                    }
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                CategoryExpenses()
+                    .tabItem {
+                        Label("Category", systemImage:"chart.bar.doc.horizontal")
+                    }
             }
-            .background(Color.background)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                
-                // MARKER : Notification ICON
-                
-                ToolbarItem{
-                    Image(systemName: "bell.badge")
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(Color.icon, .primary)
-                        .padding()
-                        .frame(width: 25, height: 50, alignment: .trailing)
-                    
-                }
-            } 
-            
-            
-            
         }
-        .navigationViewStyle(.stack)
-        .accentColor(.icon)
-
     }
-
             
     
     
