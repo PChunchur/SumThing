@@ -24,9 +24,10 @@
 		649D5CAA2A44B3F8004D2472 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 649D5CA92A44B3F8004D2472 /* Collections */; };
 		649D5CAD2A44BFF6004D2472 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 649D5CAC2A44BFF6004D2472 /* SwiftUICharts */; };
 		64F1EB902A4450E80018D34F /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F1EB8F2A4450E80018D34F /* TransactionList.swift */; };
+		C415653D2A6F965000425549 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C415653C2A6F965000425549 /* LoginView.swift */; };
 		C43413572A4EB4C3006B1A8B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43413562A4EB4C3006B1A8B /* MainView.swift */; };
 		C4346A1F2A4AA9CE0070B935 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4346A1E2A4AA9CE0070B935 /* TimeFormatting.swift */; };
-		C49A5C332A45A0F200C31ADA /* Input Transactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49A5C312A45A0F100C31ADA /* Input Transactions.xcdatamodeld */; };
+		C49A5C332A45A0F200C31ADA /* InputTransactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49A5C312A45A0F100C31ADA /* InputTransactions.xcdatamodeld */; };
 		C49A5C352A45A51E00C31ADA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A5C342A45A51E00C31ADA /* DataController.swift */; };
 		C4D084972A46ACEF00B0234D /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D084962A46ACEF00B0234D /* AddTransactionView.swift */; };
 		C4D9B9502A4EBB910032E837 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9B94F2A4EBB910032E837 /* SettingsView.swift */; };
@@ -49,6 +50,7 @@
 		64844DCD2A2317500086E3C1 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		64844DCF2A27AC3F0086E3C1 /* RecentTransactionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsList.swift; sourceTree = "<group>"; };
 		64F1EB8F2A4450E80018D34F /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		C415653C2A6F965000425549 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C43413562A4EB4C3006B1A8B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C4346A1E2A4AA9CE0070B935 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		C49A5C322A45A0F200C31ADA /* Input Transactions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Input Transactions.xcdatamodel"; sourceTree = "<group>"; };
@@ -92,14 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				64844DB22A2262D80086E3C1 /* Sum_Thing_SUIApp.swift */,
-				C43413562A4EB4C3006B1A8B /* MainView.swift */,
-				64844DB42A2262D80086E3C1 /* ContentView.swift */,
-				C4D084962A46ACEF00B0234D /* AddTransactionView.swift */,
+				C4B2F4922A690F490014042B /* Views */,
 				C49A5C302A45A0AE00C31ADA /* Data Model */,
 				64844DCF2A27AC3F0086E3C1 /* RecentTransactionsList.swift */,
-				641495FC2A49C020005FA5A4 /* CategoryExpenses.swift */,
-				C4D9B9512A502C8D0032E837 /* SelectedCategoryView.swift */,
-				C4D9B94F2A4EBB910032E837 /* SettingsView.swift */,
 				643DFD582A46E6C100440AA2 /* TransactionListViewModel.swift */,
 				64F1EB8F2A4450E80018D34F /* TransactionList.swift */,
 				64844DC22A2275530086E3C1 /* TransactionModel.swift */,
@@ -134,10 +131,24 @@
 		C49A5C302A45A0AE00C31ADA /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				C49A5C312A45A0F100C31ADA /* Input Transactions.xcdatamodeld */,
+				C49A5C312A45A0F100C31ADA /* InputTransactions.xcdatamodeld */,
 				C49A5C342A45A51E00C31ADA /* DataController.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		C4B2F4922A690F490014042B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C43413562A4EB4C3006B1A8B /* MainView.swift */,
+				C415653C2A6F965000425549 /* LoginView.swift */,
+				64844DB42A2262D80086E3C1 /* ContentView.swift */,
+				C4D084962A46ACEF00B0234D /* AddTransactionView.swift */,
+				641495FC2A49C020005FA5A4 /* CategoryExpenses.swift */,
+				C4D9B9512A502C8D0032E837 /* SelectedCategoryView.swift */,
+				C4D9B94F2A4EBB910032E837 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +241,7 @@
 				64844DB52A2262D80086E3C1 /* ContentView.swift in Sources */,
 				643DFD592A46E6C100440AA2 /* TransactionListViewModel.swift in Sources */,
 				64844DC72A2277830086E3C1 /* BookKeep.swift in Sources */,
-				C49A5C332A45A0F200C31ADA /* Input Transactions.xcdatamodeld in Sources */,
+				C49A5C332A45A0F200C31ADA /* InputTransactions.xcdatamodeld in Sources */,
 				C4346A1F2A4AA9CE0070B935 /* TimeFormatting.swift in Sources */,
 				64844DC92A2279CD0086E3C1 /* TransactionRow.swift in Sources */,
 				C43413572A4EB4C3006B1A8B /* MainView.swift in Sources */,
@@ -238,6 +249,7 @@
 				64F1EB902A4450E80018D34F /* TransactionList.swift in Sources */,
 				64844DC12A2264340086E3C1 /* Extensions.swift in Sources */,
 				64844DB32A2262D80086E3C1 /* Sum_Thing_SUIApp.swift in Sources */,
+				C415653D2A6F965000425549 /* LoginView.swift in Sources */,
 				64844DCE2A2317500086E3C1 /* TransactionListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,13 +500,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		C49A5C312A45A0F100C31ADA /* Input Transactions.xcdatamodeld */ = {
+		C49A5C312A45A0F100C31ADA /* InputTransactions.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				C49A5C322A45A0F200C31ADA /* Input Transactions.xcdatamodel */,
 			);
 			currentVersion = C49A5C322A45A0F200C31ADA /* Input Transactions.xcdatamodel */;
-			path = "Input Transactions.xcdatamodeld";
+			path = InputTransactions.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

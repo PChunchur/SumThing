@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "Input Transactions")
+    let container = NSPersistentContainer(name: "InputTransactions")
     
     init() {
         container.loadPersistentStores { desc, error in
@@ -28,7 +28,7 @@ class DataController: ObservableObject {
         }
     }
 
-    func addTransaction(name: String, amount: Int64, comment: String, date: Date,category: String,transaction_id: UUID, context: NSManagedObjectContext) {
+    func addTransaction(name: String, amount: Int64, comment: String, date: Date,category: String,transaction_id: String, context: NSManagedObjectContext) {
         let transaction = TransactionEntity(context: context)
         transaction.amount = amount
         transaction.comment = comment

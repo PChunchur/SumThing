@@ -51,7 +51,7 @@ enum TransactionType: String{
     case debit = "Debit"
     case credit = "Credit"
 }
-struct Category{
+struct Category: Hashable{
     let id : Int
     let name : String
     let icon : FontAwesomeCode

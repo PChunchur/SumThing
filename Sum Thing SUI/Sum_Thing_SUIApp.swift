@@ -13,7 +13,7 @@ struct Sum_Thing_SUIApp: App {
     @StateObject var TransactionsListVM = TransactionListViewModel1()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
                 .environmentObject(TransactionsListVM)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }

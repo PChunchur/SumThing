@@ -40,6 +40,7 @@ struct CategoryExpenses: View {
                             .padding(.leading)
                         Spacer()
                     }
+                    .foregroundColor(.black)
                 }
             }
             .sheet(item: $selectedCategory, onDismiss: { selectedCategory = nil}) { category in SelectedCategoryView(category: category)
